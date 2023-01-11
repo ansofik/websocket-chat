@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <style>
+    div {
+      padding: 10px;
+      align-self: left;
+    }
+
+    #messages {
+      background-color: whitesmoke;
+      border: 2px solid black;
+      width: 1000px;
+    }
+  </style>
+  <script src="client.js"></script>
+</head>
+
+<body>
+  <h1>Chat</h1>
+
+  <div id="namediv">
+    <label for="username">Select a username:</label>
+    <input id="username" type="text">
+    <button id="connectbutton" type="button" onclick="connect()">Connect</button>
+  </div>
+
+  <div id=chatbox style="display:none">
+    <button id="disconnectButton" type="button" onclick="disconnect()">Disconnect</button>
+
+    <div id="messagediv">
+      <label for="message">Send a message:</label>
+      <input id="message" type="text">
+      <button id="sendbutton" type="button" onclick="send()">Send</button>
+    </div>
+
+    <div id="messages"></div>
+  </div>
+</body>
+
+</html>
